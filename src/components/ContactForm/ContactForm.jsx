@@ -29,16 +29,23 @@ export const ContactForm = () => {
       (contact) =>
         contact.name.toLowerCase().trim() ===
         contactData.name.toLowerCase().trim()
+
+        && contact.number.trim() === contactData.number.trim()
     );
 
     if (hasDuplicates) {
-      Notify.warning(`Contact with name '${name}' has already been added!`, {
-        timeout: 2000,
+      Notify.warning(`Contact with name ${contactData.name} has already been added!`, {
+        timeout: 3000,
+
       });
       return;
+      
     }
 
     dispatch(addContact(contactData));
+    Notify.success(`Contact ${contactData.name} has been successfully added!`, {
+      timeout: 3000,
+    });
     form.reset();
   };
 
@@ -82,5 +89,3 @@ export const ContactForm = () => {
 };
 
 export default ContactForm;
-
-  
