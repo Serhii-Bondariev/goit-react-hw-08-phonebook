@@ -4,15 +4,14 @@ import css from './Loader.module.css';
 
 export const Loader = () => {
   return (
-    <div className={css.loader}>
+    <div style={{ top: '50%', left: '50%' }} className={css.loader}>
       <InfinitySpin
+        wrapperStyle={{ position: 'absolute', top: '50%', left: '50%' }}
         height="400"
         width="400"
         radius="148"
         color="#3f51b5"
         ariaLabel="loading"
-        wrapperStyle={{}}
-        wrapperClassName=""
         visible={true}
       />
     </div>

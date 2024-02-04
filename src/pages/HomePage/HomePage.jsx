@@ -1,3 +1,6 @@
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Alert} from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import {
   selectIsLoggedIn,
@@ -10,17 +13,17 @@ export default function HomePage() {
   const shouldRedirect = !isLoggedIn && !isRefreshing;
 
   return (
-    <div>
+    <div className="container mt-4">
       {shouldRedirect ? (
-        <div>
+        <Alert variant="primary">
           <h1>Hello!</h1>
           <p>Please, log in.</p>
-        </div>
+        </Alert>
       ) : (
-        <div>
+        <Alert variant="success">
           <h1>Welcome!</h1>
           <p>You are already logged in.</p>
-        </div>
+        </Alert>
       )}
     </div>
   );

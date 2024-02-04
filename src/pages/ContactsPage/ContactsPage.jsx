@@ -6,10 +6,11 @@ import {
   selectError,
   selectIsLoading,
 } from 'redux/contacts/contacts.selectors';
-import { ContactForm } from '../../components/ContactForm/ContactForm'
+import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Loader } from 'components/Loader/Loader';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="container mt-3">
       {isLoading && !error && <Loader />}
       <div>
         <div>
@@ -45,3 +46,4 @@ const ContactsPage = () => {
 };
 
 export default ContactsPage;
+

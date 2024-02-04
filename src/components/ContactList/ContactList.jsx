@@ -2,14 +2,15 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectVisibleContacts } from 'redux/contacts/contacts.selectors';
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 export const ContactList = () => {
   const contacts = useSelector(selectVisibleContacts);
 
   return (
-    <ul>
+    <ul className="list-group">
       {contacts.length !== 0 ? (
-        contacts.map(contact => (
+        contacts.map((contact) => (
           <ContactListItem
             name={contact.name}
             number={contact.number}
@@ -18,8 +19,8 @@ export const ContactList = () => {
           />
         ))
       ) : (
-        <li style={{ width: 450, textAlign: 'center' }}>
-          There are no contacts in your phonebook
+        <li className="list-group-item text-center">
+          There are no contacts
         </li>
       )}
     </ul>

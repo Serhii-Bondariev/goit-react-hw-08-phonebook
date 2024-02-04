@@ -1,24 +1,30 @@
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/filter/filter.reducer';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Імпортуємо стилі Bootstrap
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.filterStore.filter);
+  const filter = useSelector((state) => state.filterStore.filter);
 
-  const filterChange = evt => {
+  const filterChange = (evt) => {
     dispatch(setFilter(evt.target.value));
   };
 
   return (
-    <label>
-      Find contacts by name
+    <div className="mb-3">
+      <label htmlFor="filter" className="form-label">
+        Find contacts by name
+      </label>
       <input
         type="text"
+        id="filter"
         name="filter"
         placeholder="Search contacts"
         value={filter}
         onChange={filterChange}
+        className="form-control"
       />
-    </label>
+    </div>
   );
 };
