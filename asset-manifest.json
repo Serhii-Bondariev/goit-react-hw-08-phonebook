@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.7581ee89.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.c347671c.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.ccbe7ebb.js",
     "static/js/676.c8eeeed2.chunk.js": "/goit-react-hw-08-phonebook/static/js/676.c8eeeed2.chunk.js",
     "static/js/815.8939ec6e.chunk.js": "/goit-react-hw-08-phonebook/static/js/815.8939ec6e.chunk.js",
     "static/js/643.07e6a012.chunk.js": "/goit-react-hw-08-phonebook/static/js/643.07e6a012.chunk.js",
-    "static/js/691.b521f6bc.chunk.js": "/goit-react-hw-08-phonebook/static/js/691.b521f6bc.chunk.js",
+    "static/js/691.47203846.chunk.js": "/goit-react-hw-08-phonebook/static/js/691.47203846.chunk.js",
     "static/css/342.8205af1a.chunk.css": "/goit-react-hw-08-phonebook/static/css/342.8205af1a.chunk.css",
     "static/media/Phonebook_logo.png": "/goit-react-hw-08-phonebook/static/media/Phonebook_logo.64d3a6da161fb6ea280b.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.7581ee89.css.map": "/goit-react-hw-08-phonebook/static/css/main.7581ee89.css.map",
-    "main.c347671c.js.map": "/goit-react-hw-08-phonebook/static/js/main.c347671c.js.map",
+    "main.ccbe7ebb.js.map": "/goit-react-hw-08-phonebook/static/js/main.ccbe7ebb.js.map",
     "676.c8eeeed2.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/676.c8eeeed2.chunk.js.map",
     "815.8939ec6e.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/815.8939ec6e.chunk.js.map",
     "643.07e6a012.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/643.07e6a012.chunk.js.map",
-    "691.b521f6bc.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/691.b521f6bc.chunk.js.map",
+    "691.47203846.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/691.47203846.chunk.js.map",
     "342.8205af1a.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/342.8205af1a.chunk.css.map"
   },
   "entrypoints": [
     "static/css/main.7581ee89.css",
-    "static/js/main.c347671c.js"
+    "static/js/main.ccbe7ebb.js"
   ]
 }
