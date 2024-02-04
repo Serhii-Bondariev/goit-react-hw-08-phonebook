@@ -53,11 +53,11 @@ const SharedLayout = ({ children }) => {
                   </NavLink>
 
                   <div className={css.userBlock}>
-                    <p className={css.userAtributs}>
+                    <b className={css.userAtributs}>
                       Hi! <b className={css.userName}>{user.name} </b>
                       <b className={css.userEmail}>{user.email}</b>
                       {/* <b className={css.userAvatar}>{user.avatar}</b> */}
-                    </p>
+                    </b>
 
                     <NavLink
                       className={css.btn}
