@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ReactSwitch from 'react-switch';
 import { selectIsLoggedIn, selectUser } from 'redux/auth/auth.selectors';
 import { logOut } from 'redux/auth/auth.operations';
+import css from './SharedLayout.module.css';
 
 export const ThemeContext = createContext(null);
 
@@ -40,31 +41,39 @@ const SharedLayout = ({ children }) => {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
         <div>
-          <header>
-            <nav>
-              <NavLink to="/" end>
+          <header className={css.header}>
+            <nav className={css.nav}>
+              <NavLink className={css.link} to="/" end>
                 Home
               </NavLink>
 
               {isLoggedIn ? (
                 <>
-                  <NavLink to="/contacts">Contacts</NavLink>
+                  <NavLink className={css.link} to="/contacts">
+                    Contacts
+                  </NavLink>
 
-                  <div>
-                    <p>
-                      Welcome, <b>{user.name}</b>
+                  <div className={css.userBlock}>
+                    <p className={css.userName}>
+                      Hi! <b className={css.userAtributs}>{user.name} </b>
+                      <b className={css.userEmail}>{user.email}</b>
+                      <b className={css.userAvatar}>{user.avatar}</b>
                     </p>
-                    <button type="button" onClick={() => dispatch(logOut())}>
+                    <button
+                      className={css.btn}
+                      type="button"
+                      onClick={() => dispatch(logOut())}
+                    >
                       Logout
                     </button>
-                    <div>
+                    <div className={css.themeSwitcher}>
                       <ReactSwitch
                         onChange={toggleTheme}
                         checked={theme === 'dark'}
                         handleDiameter={35}
                         onColor="#ffc400"
                         offColor="#4e4e4e"
-                        offHandleColor="#fff"
+                        offHandleColor="#ffffff"
                         onHandleColor="#000"
                         height={30}
                         width={60}
@@ -72,8 +81,8 @@ const SharedLayout = ({ children }) => {
                         activeBoxShadow="0px 0px 1px 2px #fffc35"
                         uncheckedIcon={<div>day</div>}
                         checkedIcon={<div>night</div>}
-                        uncheckedHandleIcon={<div>🌞</div>}
-                        checkedHandleIcon={<div>🌙</div>}
+                        uncheckedHandleIcon={<div></div>}
+                        checkedHandleIcon={<div></div>}
                       />
                     </div>
                   </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix';
-import { selectContacts } from 'redux/contacts/contacts.selectors';
+import { selectContacts } from 'redux/contacts/contacte.selectors';
 import { addContact } from 'redux/contacts/contacts.operations';
 
 export const ContactForm = () => {
