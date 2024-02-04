@@ -1,16 +1,16 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
-const UserDetailsModal = ({ user, showModal, handleCloseModal }) => {
+const ContactDetailsModal = ({ contact, showModal, handleCloseModal }) => {
   return (
-    <Modal size="lg" show={showModal} onHide={handleCloseModal}>
+    <Modal show={showModal} onHide={handleCloseModal}>
       <Modal.Header closeButton>
-        <Modal.Title>User Details</Modal.Title>
+        <Modal.Title>Contact Details</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>Name: {user.name}</p>
-        <p>Email: {user.email}</p>
-        <p>Phone: {user.phone}</p>
+        <p>Name: {contact.name}</p>
+        <p>Number: {contact.number}</p>
+        <p>Email: {contact.email}</p>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={handleCloseModal}>
@@ -21,4 +21,4 @@ const UserDetailsModal = ({ user, showModal, handleCloseModal }) => {
   );
 };
 
-export default UserDetailsModal;
+export default ContactDetailsModal;

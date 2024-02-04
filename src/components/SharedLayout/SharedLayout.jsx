@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoggedIn, selectUser } from 'redux/auth/auth.selectors';
 import { logOut } from 'redux/auth/auth.operations';
 import css from './SharedLayout.module.css';
-import UserDetailsModal from '../../components/UserDetailsModal/UserDetailsModal'; // Імпортуємо новий компонент
+import UserDetailsModal from '../../components/UserDetailsModal/UserDetailsModal';
+import Logo from '../Images/Phonebook_logo.png';
 
 export const ThemeContext = createContext(null);
 
@@ -55,6 +56,7 @@ const SharedLayout = ({ children }) => {
         <div className={css.container}>
           <header className={css.header}>
             <nav className={css.nav}>
+              <img width="50px" className={css.logo} src={Logo} alt="logo" />
               <NavLink className={css.link} to="/" end>
                 Home
               </NavLink>
