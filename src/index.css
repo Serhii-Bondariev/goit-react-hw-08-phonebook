@@ -18,12 +18,12 @@ body {
   color: rgb(17, 12, 12);
 }
 
-/* #dark {
+#dark {
   background-color: rgb(56, 54, 51);
   background-size: cover;
   background-position: center;
   color: aliceblue;
-} */
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

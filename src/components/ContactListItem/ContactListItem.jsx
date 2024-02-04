@@ -19,18 +19,18 @@ export const ContactListItem = ({ name, number, id }) => {
     <>
       <li className="list-group-item d-flex justify-content-between align-items-center" key={id}>
         <div>
-          <p className="mb-0 text-bold cursor-pointer" onClick={handleShowModal}>
+          <p className="mb-0  cursor-pointer" onClick={handleShowModal}>
             {name}:
           </p>
           <p className="mb-0">{number}</p>
         </div>
         <div>
-          <button type="button" className="btn btn-primary" onClick={handleShowModal}>
+          <Button variant="outline-info" type="button" className="me-2 m-2" onClick={handleShowModal}>
             Details
-          </button>
-          <button type="button" className="btn btn-danger" onClick={handleDelete}>
+          </Button>
+          <Button variant="outline-danger" type="button"  onClick={handleDelete}>
             Delete
-          </button>
+          </Button>
         </div>
       </li>
 
