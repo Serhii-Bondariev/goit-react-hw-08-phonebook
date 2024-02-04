@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Image } from 'react-bootstrap';
 
 const UserDetailsModal = ({ user, showModal, handleCloseModal }) => {
   return (
@@ -8,9 +8,21 @@ const UserDetailsModal = ({ user, showModal, handleCloseModal }) => {
         <Modal.Title>User Details</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>Name: {user.name}</p>
-        <p>Email: {user.email}</p>
-        <p>Phone: {user.phone}</p>
+        <div className=" d-flex justify-content-between align-items-center mb-3 p-3">
+          <div className="mb-3">
+            <p className=" mb-0">Name: {user.name}</p>
+            <p>Number: {user.number}</p>
+            <p>Email: {user.email}</p>
+          </div>
+          <div className="mt-3 d-flex justify-content-end">
+            <Image
+              src="https://i.pravatar.cc/250"
+              width="250"
+              alt="contactImg"
+              rounded
+            />
+          </div>
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={handleCloseModal}>

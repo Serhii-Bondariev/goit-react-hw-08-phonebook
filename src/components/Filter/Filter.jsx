@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/filter/filter.reducer';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Імпортуємо стилі Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Filter = () => {
   const dispatch = useDispatch();
