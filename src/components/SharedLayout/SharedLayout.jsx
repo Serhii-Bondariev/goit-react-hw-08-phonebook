@@ -74,15 +74,13 @@ const SharedLayout = ({ children }) => {
                     </b>
 
                     <NavLink
-                      className={css.btn}
+                      className={css.logoutBtn}
                       to="/"
                       onClick={() => dispatch(logOut())}
                     >
                       Logout
                     </NavLink>
                   </div>
-
-                  {/* Використовуйте новий компонент UserDetailsModal */}
                   <UserDetailsModal
                     user={user}
                     showModal={showModal}
