@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <div className="container mt-4">
       {shouldRedirect ? (
-        <Alert variant="primary">
+        <Alert className="text-center, mt-4, mb-4 " variant="warning">
           <h1>Hello!</h1>
           <p>Please, log in.</p>
         </Alert>

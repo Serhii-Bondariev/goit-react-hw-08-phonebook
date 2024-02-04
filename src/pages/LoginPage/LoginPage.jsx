@@ -7,7 +7,7 @@ export default function Login() {
   return (
     <Container className="mt-3"> 
       <div>
-        <h1>Login</h1>
+        <h1 className="text-center">Login</h1>
         <LoginForm />
       </div>
     </Container>

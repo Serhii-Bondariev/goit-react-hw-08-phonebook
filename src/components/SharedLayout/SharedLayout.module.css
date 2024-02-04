@@ -74,11 +74,6 @@
   line-height: 1.2;
 }
 
-.userAtributs:hover,
-.userAtributs:focus {
-  color: rgb(255, 255, 255);
-}
-
 .userEmail {
   color: rgb(255, 255, 255);
   font-weight: 500;
@@ -145,6 +140,19 @@
 }
 
 .nightSwitcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.homePageEnter {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.themeSwitcher {
   display: flex;
   align-items: center;
   justify-content: center;

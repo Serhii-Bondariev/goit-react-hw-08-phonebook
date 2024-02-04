@@ -18,11 +18,12 @@ body {
   color: rgb(17, 12, 12);
 }
 
-#dark {
+/* #dark {
   background-color: rgb(56, 54, 51);
   background-size: cover;
   background-position: center;
-}
+  color: aliceblue;
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -41,7 +42,6 @@ h3,
 h4,
 h5,
 h6,
-p,
 span {
   margin: 0;
   padding: 0;
@@ -65,20 +65,4 @@ a {
   color: inherit;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
 
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: seashell;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(113, 96, 63);
-}
