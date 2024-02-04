@@ -4,13 +4,19 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/contacts.operations';
 import { Button } from 'react-bootstrap';
-import ContactDetailsModal from '../../components/ContactDetailsModal/ContactDetailsModal'; // Імпортуємо новий компонент
+import ContactDetailsModal from '../../components/ContactDetailsModal/ContactDetailsModal';
+import { Notify } from 'notiflix';
 
 export const ContactListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
 
-  const handleDelete = () => dispatch(deleteContact(id));
+  const handleDelete = () => {
+    dispatch(deleteContact(id));
+    Notify.success(`Contact ${name} has been successfully deleted!`, {
+      timeout: 3000,
+    });
+  };
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
