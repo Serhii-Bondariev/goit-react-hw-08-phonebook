@@ -1,9 +1,12 @@
+// SharedLayout.js
+
 import React, { createContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoggedIn, selectUser } from 'redux/auth/auth.selectors';
 import { logOut } from 'redux/auth/auth.operations';
 import css from './SharedLayout.module.css';
+import UserDetailsModal from '../../components/UserDetailsModal/UserDetailsModal'; // Імпортуємо новий компонент
 
 export const ThemeContext = createContext(null);
 
@@ -16,6 +19,8 @@ const SharedLayout = ({ children }) => {
     const initialTheme = localStorage.getItem('theme');
     return initialTheme ? initialTheme : 'light';
   });
+
+  const [showModal, setShowModal] = useState(false);
 
   const getThemeFromLocalStorage = () => {
     const savedTheme = localStorage.getItem('theme');
@@ -30,6 +35,14 @@ const SharedLayout = ({ children }) => {
       localStorage.setItem('theme', newTheme);
       return newTheme;
     });
+  };
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   useEffect(() => {
@@ -53,10 +66,9 @@ const SharedLayout = ({ children }) => {
                   </NavLink>
 
                   <div className={css.userBlock}>
-                    <b className={css.userAtributs}>
+                    <b className={css.userAtributs} onClick={handleOpenModal}>
                       Hi! <b className={css.userName}>{user.name} </b>
                       <b className={css.userEmail}>{user.email}</b>
-                      {/* <b className={css.userAvatar}>{user.avatar}</b> */}
                     </b>
 
                     <NavLink
@@ -67,6 +79,13 @@ const SharedLayout = ({ children }) => {
                       Logout
                     </NavLink>
                   </div>
+
+                  {/* Використовуйте новий компонент UserDetailsModal */}
+                  <UserDetailsModal
+                    user={user}
+                    showModal={showModal}
+                    handleCloseModal={handleCloseModal}
+                  />
                 </>
               ) : (
                 <div className={css.homePageEnter}>

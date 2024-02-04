@@ -53,6 +53,7 @@ export const ContactForm = () => {
           className="form-control"
           id="name"
           name="name"
+          placeholder="Name"
           pattern={namePattern.source}
           title="Only letters are allowed"
           required
@@ -67,6 +68,7 @@ export const ContactForm = () => {
           className="form-control"
           id="number"
           name="number"
+          placeholder="Number"
           pattern={numberPattern.source}
           title="Only digits are allowed"
           required
