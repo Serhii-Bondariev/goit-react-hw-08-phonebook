@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix';
-import { selectContacts } from 'redux/contacts/contacte.selectors';
+import { selectContacts } from 'redux/contacts/contacts.selectors';
 import { addContact } from 'redux/contacts/contacts.operations';
 
 export const ContactForm = () => {
@@ -12,7 +12,7 @@ export const ContactForm = () => {
     // Оголошення патернів
     const namePattern = /^[a-zA-Zа-яА-ЩЬЮЯҐЄІЇа-щьюяґєії]+(([' -][a-zA-Zа-яА-ЩЬЮЯҐЄІЇа-щьюяґєії ])?[a-zA-Zа-яА-ЩЬЮЯҐЄІЇа-щьюяґєії]*)*$/
     ;
-    const numberPattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    const numberPattern = /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/
   
     const handleSubmit = evt => {
       evt.preventDefault();

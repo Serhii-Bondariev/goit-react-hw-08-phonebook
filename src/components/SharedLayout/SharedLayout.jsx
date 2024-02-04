@@ -40,7 +40,7 @@ const SharedLayout = ({ children }) => {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
-        <div>
+        <div className={css.container}>
           <header className={css.header}>
             <nav className={css.nav}>
               <NavLink className={css.link} to="/" end>
